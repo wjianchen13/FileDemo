@@ -9,38 +9,55 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="文件基础操作"
-            android:textAllCaps="false"
-            android:onClick="onBase" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="文件基础操作1"
-            android:textAllCaps="false"
-            android:onClick="onBase1" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="相机，相册操作"
-            android:textAllCaps="false"
-            android:onClick="onCamera" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="android11"
-            android:textAllCaps="false"
-            android:onClick="onAndroid11" />
     
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="getFilesDir"
+            android:textAllCaps="false"
+            android:onClick="onTest1" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="getCacheDir"
+            android:textAllCaps="false"
+            android:onClick="onTest2" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="getDatabasePath"
+            android:textAllCaps="false"
+            android:onClick="onTest3" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="getCodeCacheDir"
+            android:textAllCaps="false"
+            android:onClick="onTest4" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="getDataDir"
+            android:textAllCaps="false"
+            android:onClick="onTest5" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="外部存储空间"
+            android:textAllCaps="false"
+            android:onClick="onTest6" />
+
     </LinearLayout>
+
 </ScrollView>

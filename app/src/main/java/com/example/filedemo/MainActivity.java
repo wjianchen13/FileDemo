@@ -7,6 +7,8 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.filedemo.base.BaseActivity;
+import com.example.filedemo.base.BaseActivity1;
+import com.example.filedemo.camera.CameraActivity;
 import com.example.filedemo.compat.Android11Activity;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
     
     public void onBase(View v) {
         startActivity(new Intent(this, BaseActivity.class));
+    }
+
+    public void onBase1(View v) {
+        startActivity(new Intent(this, BaseActivity1.class));
+    }
+
+    public void onCamera(View v) {
+        startActivity(new Intent(this, CameraActivity.class));
     }
 
     public void onAndroid11(View v) {
