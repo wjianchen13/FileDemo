@@ -23,9 +23,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class Android11Activity extends AppCompatActivity {
+public class CompatActivity extends AppCompatActivity {
 
-    private static final String TAG = Android11Activity.class.getSimpleName();
+    private static final String TAG = CompatActivity.class.getSimpleName();
 
     private Uri uri;
     private ImageView ivPicture;
@@ -33,7 +33,7 @@ public class Android11Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_android11);
+        setContentView(R.layout.activity_compat);
         ivPicture = findViewById(R.id.iv_picture);
     }
 

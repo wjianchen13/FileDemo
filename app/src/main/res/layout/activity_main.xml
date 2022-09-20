@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="android11"
+            android:text="文件存储兼容处理"
             android:textAllCaps="false"
             android:onClick="onAndroid11" />
     

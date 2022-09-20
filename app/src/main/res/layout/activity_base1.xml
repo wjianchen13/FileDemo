@@ -58,6 +58,14 @@
             android:textAllCaps="false"
             android:onClick="onTest6" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="外部存储是否挂载"
+            android:textAllCaps="false"
+            android:onClick="onTest7" />
+
     </LinearLayout>
 
 </ScrollView>

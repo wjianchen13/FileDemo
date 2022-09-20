@@ -25,7 +25,7 @@
         <activity android:name=".base.BaseActivity" />
         <activity android:name=".base.BaseActivity1" />
         <activity android:name=".camera.CameraActivity" />
-        <activity android:name=".compat.Android11Activity" />
+        <activity android:name=".compat.CompatActivity" />
 
 
 

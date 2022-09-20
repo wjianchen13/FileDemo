@@ -20,7 +20,11 @@ public class BaseActivity1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base1);
-    }
+
+
+
+
+        }
 
     /**
      * getFilesDir
@@ -102,6 +106,20 @@ public class BaseActivity1 extends AppCompatActivity {
         //指定目录，自动生成对应的子目录
         File fileDir2 = context.getExternalFilesDir(Environment.DIRECTORY_DCIM);
         Utils.log(fileDir2.getAbsolutePath());
+    }
+
+    /**
+     * SD卡挂载状态
+     * @param v
+     */
+    public void onTest7(View v) {
+        String state;
+        String path;
+        state = Environment.getExternalStorageState();
+        if (state.equals(Environment.MEDIA_MOUNTED)) { 
+            path = Environment.getExternalStorageDirectory().getAbsolutePath();
+            Utils.log(path);
+        }
     }
 
 }
