@@ -26,8 +26,8 @@
         <activity android:name=".base.BaseActivity1" />
         <activity android:name=".camera.CameraActivity" />
         <activity android:name=".compat.CompatActivity" />
-
-
+        <activity android:name=".picture.PictureActivity" />
+        <activity android:name=".picture.BrowseAlbumActivity" />
 
     </application>
 

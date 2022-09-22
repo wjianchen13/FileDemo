@@ -40,7 +40,15 @@
             android:layout_marginTop="5dp"
             android:text="文件存储兼容处理"
             android:textAllCaps="false"
-            android:onClick="onAndroid11" />
-    
+            android:onClick="onCompat" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="相册操作"
+            android:textAllCaps="false"
+            android:onClick="onPicture" />
+        
     </LinearLayout>
 </ScrollView>

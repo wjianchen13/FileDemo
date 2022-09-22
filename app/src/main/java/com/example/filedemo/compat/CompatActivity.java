@@ -23,12 +23,16 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+/**
+ * 从相册选取一张图片，分别存储到内部存储和外部存储中
+ */
 public class CompatActivity extends AppCompatActivity {
 
     private static final String TAG = CompatActivity.class.getSimpleName();
 
     private Uri uri;
     private ImageView ivPicture;
+    private Bitmap mBitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,26 @@ public class CompatActivity extends AppCompatActivity {
             //无权限，申请
             CameraUtils.requestSelectPhotoPermissions(this);
         }
+    }
+
+    /**
+     * 保存到内部存储
+     * /data/user/0/com.example.filedemo/files
+     * @param v
+     */
+    public void onSave1(View v) {
+        String savePath =  getFilesDir() + "/test1.JPEG";
+        saveBitmap(mBitmap, savePath);
+    }
+    
+    /**
+     * 保存到外部存储
+     * /storage/emulated/0/Android/data/com.example.filedemo/files
+     * @param v
+     */
+    public void onSave2(View v) {
+        String savePath =  getExternalFilesDir(null) + "/test2.JPEG";
+        saveBitmap(mBitmap, savePath);
     }
 
     @Override
@@ -68,10 +92,9 @@ public class CompatActivity extends AppCompatActivity {
                     ContentResolver contentResolver = getContentResolver();//内容解析器
                     ParcelFileDescriptor fd = contentResolver.openFileDescriptor(uri, "r");
                     if (fd != null) {
-                        Bitmap bitmap = BitmapFactory.decodeFileDescriptor(fd.getFileDescriptor());
+                        mBitmap = BitmapFactory.decodeFileDescriptor(fd.getFileDescriptor());
                         fd.close();
-                        ivPicture.setImageBitmap(bitmap);
-                        saveBitmap(bitmap, this);
+                        ivPicture.setImageBitmap(mBitmap);
                     }
                 }
             } catch (Exception e) {
@@ -80,10 +103,8 @@ public class CompatActivity extends AppCompatActivity {
         }
     }
 
-    public static void saveBitmap(Bitmap bitmap, Context ct) {
-        String savePath;
+    public void saveBitmap(Bitmap bitmap, String savePath) {
         File filePic;
-        savePath =  ct.getExternalFilesDir(null) + "/1.JPEG";
         try {
             filePic = new File(savePath);
             if (!filePic.exists()) {

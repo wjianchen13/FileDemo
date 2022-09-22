@@ -22,5 +22,6 @@ https://guolin.blog.csdn.net/article/details/105419420
 Android-存储基础  
 https://www.jianshu.com/p/cf6111e497cf  
 
-
+【Android 文件管理】分区存储 ( 修改与删除图片文件 )
+https://blog.51cto.com/u_14202100/5081402  
 

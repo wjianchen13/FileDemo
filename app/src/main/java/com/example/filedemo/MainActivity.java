@@ -10,6 +10,7 @@ import com.example.filedemo.base.BaseActivity;
 import com.example.filedemo.base.BaseActivity1;
 import com.example.filedemo.camera.CameraActivity;
 import com.example.filedemo.compat.CompatActivity;
+import com.example.filedemo.picture.PictureActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,9 +34,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, CameraActivity.class));
     }
 
-    public void onAndroid11(View v) {
+    public void onCompat(View v) {
         startActivity(new Intent(this, CompatActivity.class));
     }
 
-
+    public void onPicture(View v) {
+        startActivity(new Intent(this, PictureActivity.class));
+    }
+    
 }
