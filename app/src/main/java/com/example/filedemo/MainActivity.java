@@ -10,6 +10,7 @@ import com.example.filedemo.base.BaseActivity;
 import com.example.filedemo.base.BaseActivity1;
 import com.example.filedemo.camera.CameraActivity;
 import com.example.filedemo.compat.CompatActivity;
+import com.example.filedemo.download.DownloadActivity;
 import com.example.filedemo.picture.PictureActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onPicture(View v) {
         startActivity(new Intent(this, PictureActivity.class));
+    }
+
+    public void onDownload(View v) {
+        startActivity(new Intent(this, DownloadActivity.class));
     }
     
 }

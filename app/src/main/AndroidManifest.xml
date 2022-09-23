@@ -28,7 +28,8 @@
         <activity android:name=".compat.CompatActivity" />
         <activity android:name=".picture.PictureActivity" />
         <activity android:name=".picture.BrowseAlbumActivity" />
-
+        <activity android:name=".download.DownloadActivity" />
+        
     </application>
 
 </manifest>
